@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		
+		<title>
+			{{ platform_name }} - Imperial College London
+		</title>
+		
+		<meta name="description" content="Provide, improve and monitor feedback for all of your courses at scale." />
+		
+		<!--Stylesheet and scripts-->
+		<link rel="stylesheet" href="{% static 'styles/app.css' %}" type="text/css" />
+		<script type="text/javascript" src="{% static 'scripts/app.js' %}"></script>
+	</head>
+	
+	<body>
+		<header>
+			<div class="navbar">
+				<div class="navbar-left-align">
+					<a href="{% url 'app:homepage' %}">
+						<img class="logo" id="home-logo"src="{% static 'img/logo_white.svg' %}" alt="Imperial College London homepage"/>
+					</a>
+				</div>
+				<div class="navbar-right-align"></div>
+			</div>
+			<div class="menu"></div>
+		</header>
+		
+		<div class="main">
+		{% block body_block %}
+		{% endblock %}
+		</div>
+		
+		<footer>
+			<div class="footer-left-align">
+				<img class="logo" id="footer-logo" src="{% static 'img/logo_white.svg' %}" alt="Imperial College London homepage"/>
+				<div class="contacts">
+					South Kensington Campus<br>
+					London SW7 2AZ, UK<br>
+					T: +44(0)20 7589 5111
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

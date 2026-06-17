@@ -1,18 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, MinLengthValidator
 
 numeric = RegexValidator(r'^[0-9]*$', 'Only numeric characters are allowed.')
 
 class Marker(models.Model):
-    cid = models.CharField(min_length=8, max_length=8, validators=[numeric,], unique=True)
+    cid = models.CharField(max_length=8, validators=[numeric, MinLengthValidator(8)], unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.cid} [Marker]"
 
 class CourseLead(models.Model):
-    cid = models.CharField(min_length=8, max_length=8, validators=[numeric,], unique=True)
+    cid = models.CharField(max_length=8, validators=[numeric, MinLengthValidator(8)], unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -69,7 +69,7 @@ class AssignmentMarker(models.Model):
     
 class Submission(models.Model):
     assignment = models.ForeignKey(Assignment, on_delete=models.CASCADE)
-    student_cid = models.CharField(min_length=8, max_length=8, validators=[numeric,])
+    student_cid = models.CharField(max_length=8, validators=[numeric, MinLengthValidator(8)])
     grade = models.FloatField(null=True, blank=True)
     feedback = models.TextField(null=True, blank=True)
     moderated_grade = models.FloatField(null=True, blank=True)

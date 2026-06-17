@@ -1,0 +1,149 @@
+:root {
+	--dark: #5A5A5A;
+	--medium: #ddd;
+	--medlight: #F5F8FB;
+	--light: #FCFCFC;
+	--red: #FF4E4E;
+	--green: #518E4C;
+	--medgreen: #80bf70;
+	--lightgreen: #DAF7A6;
+	--yellowgreen: #90b338;
+	--darkblue: #003e74;
+	--darkpaleblue: #2d3047;
+	--blue: #3552BB;
+	--paleblue: #66629B;
+	--mediumblue: #637CC5;
+	--lightblue: #A4B3DF;
+	--medlightblue: #D8E1EE;
+	--verylightblue: #EAEFFF;
+	--darkorange: #FF560D;
+	--orange: #FF9900;
+	--lightorange: #FFB900;
+	--yellow: #FFD600;
+	--lightyellow: #f6eca0;
+	--brightyellow: #FFF200;
+	--brown: #683800;
+}
+
+html {
+	background-color: white;
+}
+
+html * {
+    font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: var(--darkblue);
+}
+
+body {
+    position: relative;
+    background-color: var(--medlight);
+    min-height: 100vh;
+}
+
+footer {
+    background-color: var(--darkblue);
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 20px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+    box-sizing: border-box;
+}
+
+.footer-left-align {
+    padding: 10px 30px 20px 0;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.contacts {
+    margin-top: 20px;
+    color: white;
+    box-sizing: border-box;
+    bottom: auto;
+    position:absolute;
+}
+
+.main {
+	padding: 120px calc(35vw - 200px) 90px calc(35vw - 200px);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.navbar {
+	position: fixed;
+	top: 0px;
+	z-index: 8;
+	width: 100%;
+	height: 59px;
+	line-height: 59px;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: var(--darkblue);
+}
+
+.navbar * {
+	background-color: var(--darkblue);
+	color: var(--light);
+	white-space: nowrap;
+}
+
+.navbar-left-align {
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	padding-left: 30px;
+}
+
+.navbar-right-align {
+	text-align: right;
+	pointer-events: none;
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+}
+
+.navbar-left-align *, .navbar-right-align * {
+	height: 13px;
+	line-height: 13px;
+	pointer-events: auto;
+	display: block;
+	font-size: 20px;
+	float: right;
+	margin-right: 30px;
+}
+
+.logo {
+	width: 200px;
+    height: 50px;
+    margin-top: 15px;
+    display: block;
+    text-indent: -250%;
+    position: absolute;
+}
+
+#home-logo {
+	bottom: 8px;
+    left: 0px;
+}
+
+#footer-logo {
+	top: -4px;
+}
+
+.menu {
+    background-color: white;
+    position: fixed;
+    min-height: 40px;
+    top: 59px;
+    width: 100%;
+    border-bottom: 1px solid var(--medium);
+}
