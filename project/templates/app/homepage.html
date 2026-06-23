@@ -2,11 +2,8 @@
 {% load static %}
 
 {% block body_block %}
-    <h1>{{ platform_name }}</h1>
-    <div>
-        Welcome to the <strong>{{ platform_name }}</strong> dashboard. Here you can provide, improve and monitor feedback for all of your courses at scale. <br />
-    </div>
-    <div>
-        <a href="/app/about/">About</a><br />
+    <h1 id="main-title">Welcome to the {{ platform_name }}</h1>
+    <div class="subtitle">
+        <b>{{platform_name}}</b> allows you to provide, improve and monitor feedback for students across your courses at scale.<br />
     </div>
 {% endblock %}

@@ -1,4 +1,5 @@
 :root {
+	--gray20: #333;
 	--dark: #5A5A5A;
 	--medium: #ddd;
 	--medlight: #F5F8FB;
@@ -31,10 +32,10 @@ html {
 
 html * {
     font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
-	font-size: 100%;
+	font-size: 14px;;
 	margin: 0px;
 	padding: 0px;
-	color: var(--darkblue);
+	color: black;
 }
 
 body {
@@ -46,7 +47,6 @@ body {
 footer {
     background-color: var(--darkblue);
     color: white;
-    font-size: 14px;
     line-height: 20px;
     padding: 0 20px;
     width: 100vw;
@@ -72,7 +72,7 @@ footer {
 }
 
 .main {
-	padding: 120px calc(35vw - 200px) 90px calc(35vw - 200px);
+	padding: 0 20px;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -146,4 +146,30 @@ footer {
     top: 59px;
     width: 100%;
     border-bottom: 1px solid var(--medium);
+}
+
+h1 {
+	background-position: center center;
+    background-size: cover;
+    color: var(--gray20);
+    padding-top: 130px;
+	padding-bottom: 10px;
+	font-size: 32px;
+    font-weight: bold;
+    line-height: 34px;
+    margin: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.subtitle {
+	margin-top: 14px;
+	margin-bottom: 50px;
 }
