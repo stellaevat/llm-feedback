@@ -1,9 +1,10 @@
 :root {
 	--gray20: #333;
-	--dark: #5A5A5A;
+	--dark: #4d636d;
+	--shadow: rgba(211, 211, 211, .5);
 	--medium: #ddd;
 	--medlight: #F5F8FB;
-	--light: #FCFCFC;
+	--light: #dadbde;
 	--red: #FF4E4E;
 	--green: #518E4C;
 	--medgreen: #80bf70;
@@ -42,6 +43,7 @@ body {
     position: relative;
     background-color: var(--medlight);
     min-height: 100vh;
+	padding-bottom: 120px;
 }
 
 footer {
@@ -49,7 +51,7 @@ footer {
     color: white;
     line-height: 20px;
     padding: 0 20px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0px;
     box-sizing: border-box;
@@ -73,8 +75,7 @@ footer {
 
 .main {
 	padding: 0 20px;
-	overflow-x: hidden;
-	overflow-y: hidden;
+    overflow: hidden;
 }
 
 .navbar {
@@ -160,6 +161,15 @@ h1 {
     margin: 0;
 }
 
+h2 {
+	font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+	padding: 15px 0 10px;
+    text-decoration: none;
+}
+
 p {
     display: block;
     margin-block-start: 1em;
@@ -172,4 +182,47 @@ p {
 .subtitle {
 	margin-top: 14px;
 	margin-bottom: 50px;
+}
+
+.card-row {
+	box-sizing: border-box;
+	width: 102%;
+	height: 100%;
+	margin-top: 30px;
+    margin-left: 0px;
+	padding: 0;
+	display: inline-block;
+    vertical-align: top;
+}
+
+.card-row ul {
+	width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card-row li {
+    margin-bottom: 20px;
+    margin-right: 1.96%;
+    max-width: 31.37%;
+    width: 23.04%;
+}
+
+.card {
+	border-radius: 6px;
+	background-color: white;
+    border: 1px solid var(--light);
+    box-shadow: 0 1px 3px var(--shadow);
+    padding: 15px;
+    padding-right: 0;
+}
+
+.card-content {
+	color: #4d636d;
+    height: 57px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding-right: 15px;
 }
